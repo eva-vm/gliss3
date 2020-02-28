@@ -25,3 +25,4 @@ jobs:
         with:
           # A directory to store and save the cache
           path: .
+          key: build
