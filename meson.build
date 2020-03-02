@@ -27,8 +27,6 @@ command += [find_program(meson.current_source_dir()/'build.sh'), meson.current_b
 gep_exe = custom_target(binname,
 	build_always_stale: true,
 	build_by_default: true,
-	install: true,
-	install_dir: get_option('bindir'),
 	output: binname,
 	command: command,
 	console: true
