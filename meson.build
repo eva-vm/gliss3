@@ -22,7 +22,7 @@ command = [find_program('env')]
 foreach k,v : env
 	command += ['@0@=@1@'.format(k,v.path())]
 endforeach
-command += [find_program(meson.source_root()/'build.sh'), meson.current_build_dir()]
+command += [find_program(meson.current_source_dir()/'build.sh'), meson.current_build_dir()]
 
 gep_exe = custom_target(binname,
 	build_always_stale: true,
